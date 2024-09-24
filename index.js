@@ -27,7 +27,7 @@
 
 
 
-
+// Adding sticky navbar
 const navbar = document.getElementById("navbar");
         const sticky = navbar.offsetTop;
 
@@ -36,7 +36,7 @@ const navbar = document.getElementById("navbar");
                 navbar.classList.add("sticky", "top-0", "fixed","shadow-2xl", "shadow-slate-500");
                 navbar.classList.remove("bg-transparent");
             } else {
-                navbar.classList.remove("sticky", "top-0", "fixed");
+                navbar.classList.remove("sticky", "top-0", "fixed","shadow-2xl","shadow-slate-500");
                 navbar.classList.add("bg-red-100");
             }
         }
@@ -50,6 +50,6 @@ document.getElementById('date-time-zone').addEventListener('click',function dona
 
     const money = document.getElementById('input-1').value;
     const ballace = document.getElementById('account').innerText
-    parseFloat(ballace)
+    parseFloat('ballace')
     console.log(ballace)
 })
