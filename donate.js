@@ -1,94 +1,60 @@
 
 
-let totalDonations1 = 0;
+// Reuseable Function 1
+
+function handleDonation(inputId, accountId, eventID, transId, placeID) {
+    const amountInput = document.getElementById(inputId);
+    const amount = parseFloat(amountInput.value);
+    const accountMoney = document.getElementById(accountId).innerText;
+    const place = document.getElementById(placeID).innerText;
+    let remainingMoney = parseFloat(accountMoney);
+    
+
+    let totalDonations = parseFloat(document.getElementById(eventID).innerText);
+
+    if (amount > 0) {
+        totalDonations += amount;
+        remainingMoney -= amount;
+
+        // Update total donations and account balance
+       
+        document.getElementById(eventID).innerText = totalDonations; // Update total donations display
+        document.getElementById(accountId).innerText = remainingMoney; // Update account display
+
+           
+        const p = document.createElement('p');
+        const br = document.createElement('br')
+        p.innerText = `${totalDonations} taka has been ${place}`;br;
+        
+        document.getElementById(transId).appendChild(p);
+                    
+
+        // Update the date and time
+        
+        amountInput.value = ''; // Clear the input field
+    } else {
+        alert("Please enter a valid amount.");
+    }
+
+    
+
+
+
+    document.getElementById('"transactionHistory').appendChild(p);
+
+    
+}
 
 document.getElementById('openModal-1').addEventListener('click', function() {
-    const amountInput = document.getElementById('input-1');
-    const amount = parseFloat(amountInput.value);
-    const accountMoney = document.getElementById('account').innerText;
-    let remaingMoney = parseFloat(accountMoney);
-
-    if (amount > 0) {
-        totalDonations1 += amount;
-        remaingMoney = remaingMoney - amount;
-
-        // console.log(totalDonations)
-         // Update total donations
-        document.getElementById('totalAmount1').innerText = totalDonations1; // Update display
-        document.getElementById('noakhali-donate').innerText = totalDonations1; // Update display
-        document.getElementById('account').innerText = remaingMoney; // Update display
-
-
-        // Update the date and time
-        const now = new Date();
-        document.getElementById('dateTime1').textContent = now.toString(); // Update display
-
-        amountInput.value = ''; // Clear the input field
-    } else {
-        alert("Please enter a valid amount.");
-    }
+    handleDonation('input-1', 'account','noakhali-donate','transactionHistory1','flood-noakhali');
 });
-
-
-
-
-let totalDonations2 = 0;
 
 document.getElementById('openModal-2').addEventListener('click', function() {
-    const amountInput = document.getElementById('input-2');
-    const amount = parseFloat(amountInput.value);
-    const accountMoney = document.getElementById('account').innerText;
-    let remaingMoney = parseFloat(accountMoney);
-
-    if (amount > 0) {
-        totalDonations2 += amount;
-        remaingMoney = remaingMoney - amount;
-
-        // console.log(totalDonations)
-         // Update total donations
-        document.getElementById('totalAmount2').innerText = totalDonations2; // Update display
-        document.getElementById('feni-donate').innerText = totalDonations2; // Update display
-        document.getElementById('account').innerText = remaingMoney; // Update display
-
-
-        // Update the date and time
-        const now = new Date();
-        document.getElementById('dateTime2').textContent = now.toString(); // Update display
-
-        amountInput.value = ''; // Clear the input field
-    } else {
-        alert("Please enter a valid amount.");
-    }
+    handleDonation('input-2', 'account','feni-donate','transactionHistory2','flood-relief');
 });
-
-
-
-
-let totalDonations3 = 0;
 
 document.getElementById('openModal-3').addEventListener('click', function() {
-    const amountInput = document.getElementById('input-3');
-    const amount = parseFloat(amountInput.value);
-    const accountMoney = document.getElementById('account').innerText;
-    let remaingMoney = parseFloat(accountMoney);
-
-    if (amount > 0) {
-        totalDonations3 += amount;
-        remaingMoney = remaingMoney - amount;
-
-        // console.log(totalDonations)
-         // Update total donations
-        document.getElementById('totalAmount3').innerText = totalDonations3; // Update display
-        document.getElementById('protest-donate').innerText = totalDonations3; // Update display
-        document.getElementById('account').innerText = remaingMoney; // Update display
-
-
-        // Update the date and time
-        const now = new Date();
-        document.getElementById('dateTime3').textContent = now.toString(); // Update display
-
-        amountInput.value = ''; // Clear the input field
-    } else {
-        alert("Please enter a valid amount.");
-    }
+    handleDonation('input-3', 'account','protest-donate','transactionHistory3','quota');
 });
+
+
