@@ -51,5 +51,4 @@ document.getElementById('date-time-zone').addEventListener('click',function dona
     const money = document.getElementById('input-1').value;
     const ballace = document.getElementById('account').innerText
     parseFloat('ballace')
-    console.log(ballace)
 })

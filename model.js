@@ -2,10 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('modal');
     const openModalButton = document.getElementById('openModal-1');
     const closeModalButton = document.getElementById('closeModal');
+    // const inputAmount = parseFloat(document.getElementById('input-1').value);
+    // console.log(inputAmount)
+    
 
     // Open modal
     openModalButton.addEventListener('click', function () {
         modal.classList.remove('hidden');
+    
+
     });
 
     // Close modal
@@ -13,12 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
     });
 
-    // Optional: Close modal when clicking outside
-    modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.add('hidden');
-        }
-    });
 });
 
 
@@ -38,12 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
     });
 
-    // Optional: Close modal when clicking outside
-    modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.add('hidden');
-        }
-    });
 });
 
 
@@ -64,10 +57,4 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('hidden');
     });
 
-    // Optional: Close modal when clicking outside
-    modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.classList.add('hidden');
-        }
-    });
 });
