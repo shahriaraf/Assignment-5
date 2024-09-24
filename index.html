@@ -21,75 +21,219 @@
     <title>Assignment-5</title>
 </head>
 
-<body>
-    <header class="bg-white w-full z-50 pb-3" id="navbar">
-        <nav class="flex justify-evenly bg-gray-200 p-5 mb-7 w-full z-50">
+<body class="bg-red-50">
+    <header class="bg-red-100 w-full z-50 pb-3" id="navbar">
+        <nav class="flex justify-evenly items-center bg-red-100 p-5 mb-7 w-full z-50">
             <div>
-                <button class="bg-green-500 rounded-lg text-white px-3 py-1"><a href="">Blog</a></button>
+                <button class="bg-red-300 rounded-lg text-black px-4 py-1 text-lg font-semibold hover:bg-red-400"><a href="">Blog</a></button>
+            </div> 
+            <div class="flex items-center gap-2">
+              <div><img  src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/logo.png" alt=""></div>
+                <div class="text-center"><h1 class="text-3xl font-semibold">Donate Bangladesh</h1></div>
             </div>
-            <div>
-                Donate Bangladesh
-            </div>
-            <div>
-                5500 BDT
+            <div class="flex gap-2 bg-red-200 px-2 py-1 rounded-md text-lg font-semibold">
+                <div><img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt=""></div>
+                <div><span id="account">5500</span> BDT </div>
             </div>
         </nav>
         <div>
           <div class="flex justify-center gap-2">
-          <button class="bg-green-500 rounded-lg text-white px-3 py-1">Donate</button>
-          <button class="bg-green-500 rounded-lg text-white px-3 py-1"><a href="history.html">History </a></button>
+          <button id="btn-donate" class="bg-red-300 rounded-lg text-black text-lg font-semibold px-4 py-1 hover:bg-red-400">Donate</button>
+          <button id="btn-history" class="bg-red-300 rounded-lg text-black text-lg font-semibold px-4 py-1 hover:bg-red-400">History</button>
           </div>
         </div>
 
     </header>
-    <main>
-        <section class="w-10/12 m-auto">
-          <div class="mb-5"><div class="card lg:card-side bg-base-100 shadow-xl">
+    <main class="mt-3">
+        <section id="donate" class="w-10/12 m-auto">
+
+
+          <div class="mb-5"><div class="card bg-red-100 lg:card-side">
             <figure>
               <img
-                src="B10A5-DOM-Quest-Build-and-Manipulate/assets/noakhali.png"
+                src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/noakhali.png"
                 alt="Album" />
             </figure>
             <div class="card-body w-1/2">
+              <div class="flex gap-2 bg-red-200 w-1/5 rounded-md px-2 py-1 text-lg font-semibold">
+                <img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt="">
+                <span>0</span> BDT
+              </div>
               <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
               <p class="text-[#1111119a]"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
               <div class="card-actions justify-end">
-                <input id="input-1" type="text" class="w-full border-solid border-gray-500" placeholder="Write Donation Amount">
-                <button class="btn btn-primary w-full" id="date-time-zone">Listen</button>
+                <input id="input-1" type="text" class="w-full border-solid border-gray-500 p-2 rounded-2xl" placeholder="Write Donation Amount">
+                <button id="openModal-1" class="btn btn-primary w-full bg-red-300 border-none text-black text-lg font-semibold hover:bg-red-400">Donate Now</button>
               </div>
             </div>
           </div></div>
-          <div class="mb-5"><div class="card lg:card-side bg-base-100 shadow-xl">
+
+
+          <div class="mb-5"><div class="card bg-red-100 lg:card-side">
             <figure>
               <img
-                src="B10A5-DOM-Quest-Build-and-Manipulate/assets/feni.png"
+                src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/feni.png"
                 alt="Album" />
             </figure>
             <div class="card-body w-1/2">
+              <div class="flex gap-2 bg-red-200 w-1/5 rounded-md px-2 py-1 text-lg font-semibold">
+                <img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt="">
+                <span>0</span> BDT
+              </div>
               <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
               <p class="text-[#1111119a]">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
               <div class="card-actions justify-end">
-                <input type="text" class="w-full border-solid border-gray-500" placeholder="Write Donation Amount">
-                <button class="btn btn-primary w-full">Listen</button>
+                <input type="text" class="w-full border-solid border-gray-500 p-2 rounded-2xl" placeholder="Write Donation Amount">
+                <button id="openModal-2" class="btn btn-primary bg-red-300 w-full border-none text-black text-lg font-semibold hover:bg-red-400">Donate Now</button>
               </div>
             </div>
           </div></div>
-          <div class="mb-5"><div class="card lg:card-side bg-base-100 shadow-xl">
+
+          
+          <div class="mb-5"><div class="card bg-red-100 lg:card-side">
             <figure>
               <img
-                src="B10A5-DOM-Quest-Build-and-Manipulate/assets/quota-protest.png"
+                src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/quota-protest.png"
                 alt="Album" />
             </figure>
             <div class="card-body w-1/2">
+              <div class="flex gap-2 bg-red-200 w-1/5 rounded-md px-2 py-1 text-lg font-semibold">
+                <img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt="">
+                <span>0</span> BDT
+              </div>
               <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
               <p class="text-[#1111119a]">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
               <div class="card-actions justify-end">
-                <input type="text" class="w-full border-solid border-gray-500" placeholder="Write Donation Amount">
-                <button class="btn btn-primary w-full">Donate Now</button>
+                <input type="text" class="w-full border-solid border-gray-500 p-2 rounded-2xl" placeholder="Write Donation Amount">
+                <button id="openModal-3" class="btn btn-primary bg-red-300 w-full border-none text-black text-lg font-semibold hover:bg-red-400">Donate Now</button>
               </div>
             </div>
           </div></div>
         </section>
+
+        
+        <section id="history" class="hidden">
+            <div>
+              <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio repudiandae excepturi quis maiores ipsam recusandae eligendi adipisci rerum explicabo! Excepturi impedit debitis voluptate perferendis consequuntur ipsa nisi, quidem eaque perspiciatis.</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, dicta, natus voluptates aliquam ullam nam mollitia aliquid consequuntur harum obcaecati magnam dolore, illum ratione deleniti rerum veniam sint nemo placeat.</p>
+            </div>
+            <div>
+              <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam saepe quasi magni repellendus excepturi cupiditate eaque magnam hic, distinctio, eius nulla rem? Nemo aperiam, praesentium excepturi ratione dolorem tempora.</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, repellat nihil eveniet rerum necessitatibus illo, at consequatur mollitia id quidem itaque, culpa ea incidunt eum dolorem. Rerum iusto fugiat eos!</p>
+            </div>
+            <div>
+              <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus necessitatibus sequi quam. Ipsa provident, commodi maxime voluptatum nostrum eos corporis hic accusamus ea? In, asperiores culpa illum numquam quae officia.</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sint sed vel veritatis error adipisci, ipsum non impedit voluptas, cumque minus quis. Velit inventore possimus minus. Tempore incidunt ullam animi?</p>
+            </div>
+        </section>
+
+
+
+
+        <!-- extrad -->
+
+    
+
+    
+
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-red-100 p-6 rounded shadow-lg max-w-sm w-full text-center">
+            <h2 class="text-[34px] font-bold">Congrates !</h2><br>
+            <div class="flex items-center justify-center">
+            <img src="B10A5-DOM-Quest-Build-and-Manipulate-main/assets/coin.png" alt="">
+            </div>
+            <p class="mt-2 text-base font-medium">You Have Donate For Humankind</p>
+            <p class="text-2xl font-semibold">Successfully</p>
+            <div class="mt-4 flex justify-center">
+                <button id="closeModal" class="bg-red-500 text-white text-lg font-semibold px-4 py-2 rounded-lg">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const openModalButton = document.getElementById('openModal-1');
+    const closeModalButton = document.getElementById('closeModal');
+
+    // Open modal
+    openModalButton.addEventListener('click', function () {
+        modal.classList.remove('hidden');
+    });
+
+    // Close modal
+    closeModalButton.addEventListener('click', function () {
+        modal.classList.add('hidden');
+    });
+
+    // Optional: Close modal when clicking outside
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const openModalButton = document.getElementById('openModal-2');
+    const closeModalButton = document.getElementById('closeModal');
+
+    // Open modal
+    openModalButton.addEventListener('click', function () {
+        modal.classList.remove('hidden');
+    });
+
+    // Close modal
+    closeModalButton.addEventListener('click', function () {
+        modal.classList.add('hidden');
+    });
+
+    // Optional: Close modal when clicking outside
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+
+
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const openModalButton = document.getElementById('openModal-3');
+    const closeModalButton = document.getElementById('closeModal');
+
+    // Open modal
+    openModalButton.addEventListener('click', function () {
+        modal.classList.remove('hidden');
+    });
+
+    // Close modal
+    closeModalButton.addEventListener('click', function () {
+        modal.classList.add('hidden');
+    });
+
+    // Optional: Close modal when clicking outside
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+
+
+
+    </script>
+
+
+
+
+
+
 
     </main>
     <footer>
@@ -97,6 +241,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="hidden.js"></script>
 
 </body>
 

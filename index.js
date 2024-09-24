@@ -1,29 +1,29 @@
 
 
     
- document.getElementById('date-time-zone').addEventListener('click', function() {
-    const date = new Date();
-    const options = {
-        timeZone: 'Asia/Dhaka',
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-    };
-    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+//  document.getElementById('date-time-zone').addEventListener('click', function() {
+//     const date = new Date();
+//     const options = {
+//         timeZone: 'Asia/Dhaka',
+//         year: 'numeric',
+//         month: 'numeric',
+//         day: 'numeric',
+//         hour: 'numeric',
+//         minute: 'numeric',
+//         second: 'numeric',
+//     };
+//     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
     
-    // Save the formatted date to local storage
-    localStorage.setItem('formattedDate', formattedDate);
+//     // Save the formatted date to local storage
+//     localStorage.setItem('formattedDate', formattedDate);
     
-    // Optionally, you could redirect to the second page
-    window.location.href = 'history.html';
-});
+//     // Optionally, you could redirect to the second page
+//     window.location.href = 'history.html';
+// });
 
-window.onscroll = function() {
-    stickyNavbar();
-};
+// window.onscroll = function() {
+//     stickyNavbar();
+// };
 
 
 
@@ -33,18 +33,23 @@ const navbar = document.getElementById("navbar");
 
         function stickyNavbar() {
             if (window.scrollY > sticky) {
-                navbar.classList.add("sticky", "top-0", "fixed");
+                navbar.classList.add("sticky", "top-0", "fixed","shadow-2xl", "shadow-slate-500");
                 navbar.classList.remove("bg-transparent");
             } else {
                 navbar.classList.remove("sticky", "top-0", "fixed");
-                navbar.classList.add("bg-transparent");
+                navbar.classList.add("bg-red-100");
             }
         }
 
         window.onscroll = stickyNavbar;
 
 
-// document.getElementById('input-1').addEventListener('click', function donation(){
 
-//     const donation = 
-// })
+
+document.getElementById('date-time-zone').addEventListener('click',function donate(){
+
+    const money = document.getElementById('input-1').value;
+    const ballace = document.getElementById('account').innerText
+    parseFloat(ballace)
+    console.log(ballace)
+})
