@@ -1,6 +1,7 @@
 
 
 // Reuseable Function 1
+// This is a reuseable function
 
 function handleDonation(inputId, accountId, eventID, transId, placeID) {
     const amountInput = document.getElementById(inputId);
@@ -20,10 +21,6 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
 
         document.getElementById(eventID).innerText = totalDonations; // Update total donations display
         document.getElementById(accountId).innerText = remainingMoney; // Update account display
-
-
-
-
 
 
         const div = document.createElement("div");
