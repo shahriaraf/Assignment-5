@@ -1,31 +1,5 @@
 
 
-    
-//  document.getElementById('date-time-zone').addEventListener('click', function() {
-//     const date = new Date();
-//     const options = {
-//         timeZone: 'Asia/Dhaka',
-//         year: 'numeric',
-//         month: 'numeric',
-//         day: 'numeric',
-//         hour: 'numeric',
-//         minute: 'numeric',
-//         second: 'numeric',
-//     };
-//     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
-    
-//     // Save the formatted date to local storage
-//     localStorage.setItem('formattedDate', formattedDate);
-    
-//     // Optionally, you could redirect to the second page
-//     window.location.href = 'history.html';
-// });
-
-// window.onscroll = function() {
-//     stickyNavbar();
-// };
-
-
 
 // Adding sticky navbar
 const navbar = document.getElementById("navbar");
