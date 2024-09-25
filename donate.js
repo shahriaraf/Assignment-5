@@ -6,14 +6,19 @@
 function handleDonation(inputId, accountId, eventID, transId, placeID) {
     const amountInput = document.getElementById(inputId);
     const amount = parseFloat(amountInput.value);
+    console.log(amount)
     const accountMoney = document.getElementById(accountId).innerText;
     const place = document.getElementById(placeID).innerText;
     let remainingMoney = parseFloat(accountMoney);
-
+    const modal = document.getElementById('modal');
+    const closeModalButton = document.getElementById('closeModal');
 
     let totalDonations = parseFloat(document.getElementById(eventID).innerText);
 
     if (amount > 0) {
+
+        modal.classList.remove('hidden');
+
         totalDonations += amount;
         remainingMoney -= amount;
 
@@ -53,6 +58,10 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
     } else {
         alert("Please enter a valid amount.");
     }
+
+    closeModalButton.addEventListener('click', function () {
+        modal.classList.add('hidden');
+    });
 
 
 }
