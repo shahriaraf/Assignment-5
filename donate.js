@@ -24,8 +24,8 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
 
         // Update total donations and account balance
 
-        document.getElementById(eventID).innerText = totalDonations; // Update total donations display
-        document.getElementById(accountId).innerText = remainingMoney; // Update account display
+        document.getElementById(eventID).innerText = totalDonations;
+        document.getElementById(accountId).innerText = remainingMoney;
 
 
         const div = document.createElement("div");
@@ -34,26 +34,26 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
         div.className = "border-solid border-red-300 rounded-xl p-3 mb-4";
         div.id = "myUniqueId";
 
-        // Step 2: Create a <p> element for amount
+        // Step 2: Create a <p>
         const pAmount = document.createElement("p");
         pAmount.innerText = `${amount} Taka was ${place}`;
         pAmount.className = "font-semibold text-lg"
 
-        // Step 3: Create another <p> element for date and time
+        // Step 3: Create another <p>
         const pDateTime = document.createElement("p");
         const now = new Date();
         const dateTime = now.toString();
         pDateTime.innerText = `Date: ${dateTime}`;
 
-        // Step 4: Append the <p> elements to the <div>
+        // Step 4: Append the <p> to <div>
         div.appendChild(pAmount);
         div.appendChild(pDateTime);
 
-        // Step 5: Append the <div> to the specified container
+        // Step 5: Append the <div>
         document.getElementById(transId).appendChild(div);
 
 
-        amountInput.value = ''; // Clear the input field
+        amountInput.value = ''; // Input field clear
 
     } else {
         alert("Please enter a valid amount.");
