@@ -15,7 +15,7 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
 
     let totalDonations = parseFloat(document.getElementById(eventID).innerText);
 
-    if (amount > 0) {
+    if (amount > 0 && remainingMoney > amount ) {
 
         modal.classList.remove('hidden');
 
@@ -55,9 +55,17 @@ function handleDonation(inputId, accountId, eventID, transId, placeID) {
 
         amountInput.value = ''; // Input field clear
 
-    } else {
+    }
+    
+    else if(amount <= 0){
         alert("Please enter a valid amount.");
     }
+
+    else{
+        alert("Insufficient Funds")
+    }
+
+
 
     closeModalButton.addEventListener('click', function () {
         modal.classList.add('hidden');
